@@ -17,7 +17,7 @@
       var template = Handlebars.templates['login.tpl'];
       console.log('tpl');
       var templateVars = {
-        title: 'Judy is a total gowl',
+        title: 'Page title',
         content: 'blah blah',
         stuff: 'stuff'
       };
