@@ -3,10 +3,11 @@
   <head>
     <title></title>
   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />-->
     <meta charset="utf-8">
 
 
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
     <!-- iPad/iPhone specific css below, add after your main css >
     <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
@@ -16,10 +17,12 @@
     <script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/backbone.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/handlebars-1.0.0.beta.6.js"></script>
-    <script type="text/javascript" charset="utf-8" src="test.js"></script>  
+    <!--<script type="text/javascript" charset="utf-8" src="js/lib/handlebars-1.0.0.beta.6.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="js/lib/handlebars.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/views/templates/login.tpl.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/test.js"></script>  
     <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-    <script type="text/javascript" charset="utf-8" src="cordova-1.7.0rc1.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="cordova-1.7.0rc1.js"></script>-->
     <script type="text/javascript">
 
 
@@ -44,7 +47,11 @@
       
       function onBodyLoad()
       {		
-        document.addEventListener("deviceready", onDeviceReady, false);
+        //document.addEventListener("deviceready", onDeviceReady, false);
+        var test = Object.create(TestApp.Testy);
+        // test.getPosition();
+        test.displayTplContent();
+        console.log('hello');
       }
       
       /* When this function is called, Cordova has been initialized and is ready to roll */
@@ -54,22 +61,18 @@
       function onDeviceReady() {
         // do your thing!
         var test = Object.create(TestApp.Testy);
-        test.getPosition();
+        // test.getPosition();
+        test.displayTplContent();
+
       }
     
     </script>
   </head>
   <body onload="onBodyLoad()">
   <div class="handlebar-content"></div>
-  <img style="display:none;" id="myImage" src="" />
+  <!--<img style="display:none;" id="myImage" src="" />-->
 
+  <div id="qunit"></div>
 
-  <script id="entry-template" type="text/x-handlebars-template">
-    <h1>{{title}}</h1>
-    <p>{{content}}</p>
-    Your current location is:<br/>
-    Latitude: {{lat}}<br/>
-    Longitude: {{longitude}}
-  </script>
   </body>
 </html>
