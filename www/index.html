@@ -12,17 +12,40 @@
     <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
     -->
+
+    <!-- jquery libraries -->
     <script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile/jquery.mobile-1.1.0.js"></script>
+    <!-- backbone and it's dependencies -->
     <script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/backbone.js"></script>
+
+    <!-- Include this file if you want to compile handlebars templates on the fly -->
     <!--<script type="text/javascript" charset="utf-8" src="js/lib/handlebars-1.0.0.beta.6.js"></script>-->
+    <!-- Handlebars runtime library - Use this with pre-compiled templates -->
     <script type="text/javascript" charset="utf-8" src="js/lib/handlebars.js"></script>
+
+    <!-- create namespace -->
+    <script type="text/javascript" charset="utf-8">
+      TestApp = {};
+    </script>
+    <!-- Backbone Router -->
+    <script type="text/javascript" charset="utf-8" src="js/routes/router.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    </script>
+
+    <!-- Backbone Views -->
+    <script type="text/javascript" charset="utf-8" src="js/views/home.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/views/PageView.js"></script>
+
+    <!-- App Starter -->
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+
+    <!-- pre-compiled templates -->
     <script type="text/javascript" charset="utf-8" src="js/views/templates/login.tpl.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/test.js"></script>  
     <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-    <!--<script type="text/javascript" charset="utf-8" src="cordova-1.7.0rc1.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="cordova-1.7.0rc1.js"></script>
     <script type="text/javascript">
 
 
@@ -47,11 +70,10 @@
       
       function onBodyLoad()
       {		
-        //document.addEventListener("deviceready", onDeviceReady, false);
-        var test = Object.create(TestApp.Testy);
-        // test.getPosition();
-        test.displayTplContent();
-        console.log('hello');
+        document.addEventListener("deviceready", onDeviceReady, false);
+        console.log(TestApp);
+        var test = Object.create(TestApp.AppStarter);
+        test.startApp();
       }
       
       /* When this function is called, Cordova has been initialized and is ready to roll */
@@ -60,9 +82,11 @@
       for more details -jm */
       function onDeviceReady() {
         // do your thing!
-        var test = Object.create(TestApp.Testy);
-        // test.getPosition();
-        test.displayTplContent();
+
+        var test = Object.create(TestApp.AppStarter);
+        console.log('hello');
+        test.startApp();
+
 
       }
     

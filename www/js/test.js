@@ -9,7 +9,7 @@
       navigator.geolocation.getCurrentPosition(function(position) {
        context.lat = position.coords.latitude;
        context.longitude = position.coords.longitude;
-       context.displayContent();
+       context.displayTplContent();
       });
     },
     displayTplContent: function() {
@@ -19,22 +19,11 @@
       var templateVars = {
         title: 'Page title',
         content: 'blah blah',
-        stuff: 'stuff'
-      };
-      var html = template(templateVars);
-      console.log(html);
-      $('.handlebar-content').append(html);
-    },
-    displayContent: function() {
-      var source   = jQuery("#entry-template").html();
-      var template = Handlebars.compile(source);
-      var templateVars = {
-        title: 'Judy is a total gowl',
-        content: 'blah blah',
         lat: this.lat,
         longitude: this.longitude
       };
       var html = template(templateVars);
+      console.log(html);
       $('.handlebar-content').append(html);
     },
     pictureThis: function() {
