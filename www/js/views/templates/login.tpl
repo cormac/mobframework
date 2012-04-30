@@ -3,12 +3,10 @@
 </div>
 <div data-role="content">
   <div class="form">
-    <form action="#page1" method="POST">
-      <input type="email" name="email" placeholder="enter email">
-      <input type="password" name="pass" value="">
+    
+      <input type="email" name="email" placeholder="Enter email...">
+      <input type="password" name="pass" value="" placeholder="Password...">
       <input type="submit" name="submit" class="login-submit"  value="Log in">
-    </form>
   </div>
-    <a href="#page1/1" data-role="button">Page 1</a>
 </div>
 
