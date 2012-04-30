@@ -5,7 +5,7 @@ templates['store.tpl'] = template(function (Handlebars,depth0,helpers,partials,d
   var buffer = "", stack1, foundHelper, self=this, functionType="function", helperMissing=helpers.helperMissing, undef=void 0, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div data-role=\"header\">\n  <a href=\"#page1\" data-transition=\"reverse slide\" data-icon=\"back\" class=\"back ui-btn-left\" data-direction=\"reverse\">Back</a>\n  <h1>";
+  buffer += "<div data-role=\"header\">\n  <a data-role=\"button\" data-direction=\"reverse\" data-rel=\"back\" href=\"#page1/0\" data-icon=\"arrow-l\" data-iconpos=\"left\">Back</a>\n  <h1>";
   foundHelper = helpers.name;
   stack1 = foundHelper || depth0.name;
   if(typeof stack1 === functionType) { stack1 = stack1.call(depth0, { hash: {} }); }

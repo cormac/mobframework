@@ -1,5 +1,5 @@
 <div data-role="header">
-  <a href="#page1" data-transition="reverse slide" data-icon="back" class="back ui-btn-left" data-direction="reverse">Back</a>
+  <a data-role="button" data-direction="reverse" data-rel="back" href="#page1/0" data-icon="arrow-l" data-iconpos="left">Back</a>
   <h1>{{name}}</h1>
 </div>
 <div data-role="content">

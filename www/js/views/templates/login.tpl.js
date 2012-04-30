@@ -5,5 +5,5 @@ templates['login.tpl'] = template(function (Handlebars,depth0,helpers,partials,d
   var foundHelper, self=this;
 
 
-  return "<div data-role=\"header\">\n  <h1>Home</h1>\n</div>\n<div data-role=\"content\">\n  <div class=\"form\">\n    <form action=\"#page1\" method=\"POST\">\n      <input type=\"email\" name=\"email\" placeholder=\"enter email\">\n      <input type=\"password\" name=\"pass\" value=\"\">\n      <input type=\"submit\" name=\"submit\" class=\"login-submit\"  value=\"Log in\">\n    </form>\n  </div>\n    <a href=\"#page1\" data-role=\"button\">Page 1</a>\n</div>\n\n";});
+  return "<div data-role=\"header\">\n  <h1>Home</h1>\n</div>\n<div data-role=\"content\">\n  <div class=\"form\">\n    <form action=\"#page1\" method=\"POST\">\n      <input type=\"email\" name=\"email\" placeholder=\"enter email\">\n      <input type=\"password\" name=\"pass\" value=\"\">\n      <input type=\"submit\" name=\"submit\" class=\"login-submit\"  value=\"Log in\">\n    </form>\n  </div>\n    <a href=\"#page1/1\" data-role=\"button\">Page 1</a>\n</div>\n\n";});
 })();

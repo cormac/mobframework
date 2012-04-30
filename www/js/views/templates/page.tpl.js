@@ -11,14 +11,14 @@ function program1(depth0,data) {
   stack1 = depth0.id;
   if(typeof stack1 === functionType) { stack1 = stack1.call(depth0, { hash: {} }); }
   else if(stack1=== undef) { stack1 = helperMissing.call(depth0, "this.id", { hash: {} }); }
-  buffer += escapeExpression(stack1) + "\">";
+  buffer += escapeExpression(stack1) + "/1\">";
   stack1 = depth0.name;
   if(typeof stack1 === functionType) { stack1 = stack1.call(depth0, { hash: {} }); }
   else if(stack1=== undef) { stack1 = helperMissing.call(depth0, "this.name", { hash: {} }); }
   buffer += escapeExpression(stack1) + "</a></li>\n    ";
   return buffer;}
 
-  buffer += "<div data-role=\"header\">\n  <a href=\"#\" data-transition=\"reverse slide\" data-icon=\"back\" class=\"back ui-btn-left\" data-direction=\"reverse\">Back</a>\n  <h1>Local Stores</h1>\n</div>\n<div data-role=\"content\">\n  <ul data-filter=\"true\" data-role=\"listview\" data-theme=\"g\">\n    ";
+  buffer += "<div data-role=\"header\">\n  <a data-role=\"button\" data-direction=\"reverse\" data-rel=\"back\" href=\"#\" data-icon=\"arrow-l\" data-iconpos=\"left\">Back</a>\n  <h1>Local Stores</h1>\n</div>\n<div data-role=\"content\">\n  <ul data-filter=\"true\" data-role=\"listview\" data-theme=\"g\">\n    ";
   foundHelper = helpers.shops;
   stack1 = foundHelper || depth0.shops;
   stack2 = helpers.each;

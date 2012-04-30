@@ -9,6 +9,6 @@
       <input type="submit" name="submit" class="login-submit"  value="Log in">
     </form>
   </div>
-    <a href="#page1" data-role="button">Page 1</a>
+    <a href="#page1/1" data-role="button">Page 1</a>
 </div>
 
